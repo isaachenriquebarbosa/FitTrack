@@ -1,0 +1,8 @@
+{
+  "name": "FitTrack Academia",
+  "short_name": "FitTrack",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07100b",
+  "theme_color": "#07100b"
+}
