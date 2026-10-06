@@ -1,0 +1,1024 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f0d;
+    color: white;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* LOGIN */
+
+.login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b0f0d;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: #121814;
+    border: 1px solid #26342b;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 55px;
+    color: #39ff88;
+}
+
+.login-box h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.login-box p {
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #34433a;
+    border-radius: 10px;
+    background: #0c110e;
+    color: white;
+    outline: none;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    background: #39ff88;
+    color: #06100a;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+/* APLICATIVO */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* MENU */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    padding: 25px 15px;
+
+    background: #101611;
+
+    border-right: 1px solid #26342b;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.logo-area i {
+    color: #39ff88;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-btn {
+    padding: 13px;
+
+    background: transparent;
+
+    color: #aaa;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    font-size: 15px;
+}
+
+.menu-btn i {
+    margin-right: 10px;
+}
+
+.menu-btn:hover,
+.menu-btn.active {
+    background: #1c2a21;
+    color: #39ff88;
+}
+
+.sair-btn {
+    margin-top: auto;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: #241514;
+
+    color: #ff6b6b;
+}
+
+
+/* CONTEÚDO */
+
+.content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    padding: 40px;
+
+    max-width: 1500px;
+}
+
+.tela {
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.topo {
+    margin-bottom: 30px;
+}
+
+.saudacao {
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.saudacao span {
+    color: #39ff88;
+}
+
+.topo h1,
+.titulo h1 {
+    font-size: 34px;
+}
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.titulo p {
+    color: #888;
+    margin-top: 8px;
+}
+
+
+/* CARDS */
+
+.card {
+    background: #121814;
+
+    border: 1px solid #26342b;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+/* DESTAQUE */
+
+.destaque {
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            #15251b,
+            #101611
+        );
+}
+
+.destaque h2 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.destaque p {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.destaque button,
+.finalizar-btn,
+.salvar-btn {
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    background: #39ff88;
+
+    color: #06100a;
+
+    font-weight: bold;
+}
+
+.tag {
+    color: #39ff88;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.destaque-icon {
+    color: #39ff88;
+
+    font-size: 100px;
+}
+
+
+/* ESTATÍSTICAS */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.stat > i,
+.progresso-card > i {
+    color: #39ff88;
+
+    font-size: 35px;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 25px;
+}
+
+.stat span,
+.progresso-card span {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* ================= RESUMO SEMANAL ================= */
+
+.semanal-card {
+    margin-top: 20px;
+}
+
+.semana-titulo {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.semana-titulo h2 {
+    font-size: 22px;
+}
+
+.semana-titulo p {
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+.agenda-semanal {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.dia-treino {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    background: #172019;
+
+    border: 1px solid #26342b;
+
+    border-radius: 12px;
+
+    color: white;
+
+    text-align: left;
+
+    transition: 0.2s;
+}
+
+.dia-treino:hover {
+    transform: translateX(5px);
+
+    border-color: #39ff88;
+}
+
+
+.dia-nome {
+    width: 55px;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #26342b;
+
+    color: #aaa;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+
+.dia-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.dia-info strong {
+    font-size: 16px;
+}
+
+.dia-info span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.dia-treino > i {
+    color: #39ff88;
+
+    font-size: 18px;
+}
+
+
+/* DIA ATUAL */
+
+.dia-treino.hoje {
+    border: 2px solid #39ff88;
+
+    background: #15251b;
+
+    box-shadow:
+        0 0 15px rgba(57, 255, 136, 0.08);
+}
+
+.dia-treino.hoje .dia-nome {
+    background: #39ff88;
+
+    color: #06100a;
+}
+
+.dia-treino.hoje::after {
+    content: "HOJE";
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    background: #39ff88;
+
+    color: #06100a;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* DESCANSO */
+
+.dia-treino.descanso {
+    opacity: 0.65;
+}
+
+.dia-treino.descanso:hover {
+    opacity: 1;
+}
+
+.dia-treino.descanso > i {
+    color: #888;
+}
+
+
+/* FILTROS */
+
+.filtros {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.filtro {
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    background: #172019;
+
+    color: #aaa;
+}
+
+.filtro:hover,
+.filtro.ativo {
+    background: #39ff88;
+
+    color: #06100a;
+}
+
+
+/* EXERCÍCIOS */
+
+.exercicios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.exercicio {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 0;
+}
+
+.exercicio-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: #1b2b21;
+
+    color: #39ff88;
+
+    font-size: 25px;
+}
+
+.exercicio-info {
+    flex: 1;
+}
+
+.exercicio-info span {
+    color: #39ff88;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.exercicio-info h3 {
+    margin: 4px 0;
+}
+
+.exercicio-info p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+.exercicio button {
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    background: #1d2a22;
+
+    color: #39ff88;
+}
+
+.exercicio.concluido {
+    opacity: 0.6;
+}
+
+.exercicio.concluido button {
+    background: #39ff88;
+
+    color: #06100a;
+}
+
+.finalizar-btn {
+    margin-top: 25px;
+}
+
+
+/* MONTAR TREINO */
+
+.montar-box {
+    max-width: 700px;
+}
+
+.montar-box label,
+.perfil-form label {
+    display: block;
+
+    color: #aaa;
+
+    margin-bottom: 8px;
+}
+
+.montar-box select,
+.perfil-form input,
+.perfil-form select {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    background: #0c110e;
+
+    color: white;
+
+    border: 1px solid #34433a;
+
+    border-radius: 9px;
+
+    outline: none;
+}
+
+.montar-box > button {
+    padding: 12px 18px;
+
+    border-radius: 9px;
+
+    background: #39ff88;
+
+    color: #06100a;
+
+    font-weight: bold;
+}
+
+.lista-treino {
+    margin: 25px 0;
+}
+
+.item-treino {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 13px;
+
+    margin-bottom: 8px;
+
+    background: #18221c;
+
+    border-radius: 8px;
+}
+
+.item-treino button {
+    background: transparent;
+
+    color: #ff6b6b;
+
+    font-size: 18px;
+}
+
+
+/* PROGRESSO */
+
+.progresso-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.progresso-card strong {
+    margin-left: auto;
+
+    font-size: 24px;
+}
+
+.grafico {
+    height: 250px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-around;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    border-bottom: 1px solid #34433a;
+}
+
+.grafico div {
+    height: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: end;
+
+    flex-direction: column;
+}
+
+.grafico b {
+    width: 60%;
+
+    min-height: 10px;
+
+    background: #39ff88;
+
+    border-radius: 8px 8px 0 0;
+}
+
+.grafico span {
+    padding: 10px 0;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* CRONÔMETRO */
+
+.timer-box {
+    max-width: 600px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.timer-box h2 {
+    color: #39ff88;
+
+    font-size: 90px;
+
+    margin: 30px 0;
+}
+
+.timer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.timer-buttons button {
+    padding: 12px 18px;
+
+    background: #1b281f;
+
+    color: white;
+
+    border-radius: 9px;
+}
+
+.timer-buttons button:hover {
+    background: #39ff88;
+
+    color: #06100a;
+}
+
+
+/* CONQUISTAS */
+
+.conquistas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.conquista {
+    text-align: center;
+}
+
+.conquista i {
+    color: #39ff88;
+
+    font-size: 45px;
+}
+
+.conquista h3 {
+    margin: 15px 0 8px;
+}
+
+.conquista p {
+    color: #888;
+}
+
+
+/* PERFIL */
+
+.perfil-form {
+    max-width: 650px;
+}
+
+.perfil-form button {
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: #39ff88;
+
+    color: #06100a;
+
+    font-weight: bold;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .content {
+        margin-left: 210px;
+
+        width: calc(100% - 210px);
+
+        padding: 25px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .exercicios {
+        grid-template-columns: 1fr;
+    }
+
+    .conquistas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .app {
+        display: block;
+    }
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #26342b;
+    }
+
+    .sidebar nav {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .sair-btn {
+        margin-top: 15px;
+    }
+
+    .content {
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .topo h1,
+    .titulo h1 {
+        font-size: 27px;
+    }
+
+    .destaque-icon {
+        display: none;
+    }
+
+    .dia-treino {
+        padding: 12px;
+    }
+
+    .dia-nome {
+        width: 45px;
+
+        height: 40px;
+    }
+
+    .dia-info strong {
+        font-size: 14px;
+    }
+
+    .dia-treino.hoje::after {
+        display: none;
+    }
+
+    .timer-box h2 {
+        font-size: 65px;
+    }
+}.capa {
+    opacity: 1 !important;
+    min-height: 380px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: #07100b;
+
+   background-image: url("capa-academia.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.capa-conteudo {
+    max-width: 600px;
+    padding: 45px;
+}
+
+.capa-conteudo span {
+    color: #39ff88;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.capa-conteudo h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.capa-conteudo p {
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.capa-conteudo button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #39ff88;
+    color: #06100a;
+    font-weight: bold;
+    cursor: pointer;
+}.capa::before,
+.capa::after {
+    display: none !important;
+    content: none !important;
+}
+
+.capa {
+    position: relative !important;
+    background-image: url("capa-academia.png") !important;
+    background-color: transparent !important;
+}
+
+.capa-conteudo {
+    position: relative;
+    z-index: 10;
+}
